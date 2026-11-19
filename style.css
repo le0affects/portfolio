@@ -4502,3 +4502,62 @@ text-shadow:
 .contact-main {
     margin-top: 10px !important;
 }
+
+.software-icons {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 22px;
+}
+
+.software-icons img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  animation: softwareFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 9px rgba(196, 161, 255, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.software-icons img:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.software-icons img:hover {
+  filter: drop-shadow(0 0 15px rgba(196, 161, 255, 0.7));
+}
+
+@keyframes softwareFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(-7px) rotate(3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .software-icons img {
+    animation: none;
+  }
+}
+
+.software-icons img:first-child {
+  transform: scale(1.5);
+}
+
+.software-icons img:first-child {
+  width: 82px !important;
+  height: 82px !important;
+}
+
+.software-icons img:last-child {
+  width: 52px !important;
+  height: 52px !important;
+}
